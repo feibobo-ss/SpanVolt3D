@@ -1,8 +1,8 @@
 # Data are available upon request and are not part of this source release.
-data/
-datasets/
-native/
-benchmark6/
+/data/
+/datasets/
+/native/
+/benchmark6/
 *.las
 *.laz
 *.ply
