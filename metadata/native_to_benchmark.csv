@@ -1,0 +1,14 @@
+native_label_id,native_label_name,benchmark_label_id,benchmark_label_name,ignore_id,action
+0,Created,-1,,-1,physically_remove_before_voxelization
+1,Unclassified,-1,,-1,physically_remove_before_voxelization
+2,Ground,-1,,-1,physically_remove_before_voxelization
+3,Vegetation,5,vegetation,-1,retain_and_remap
+4,Building,-1,,-1,physically_remove_before_voxelization
+5,Conductor,1,conductor,-1,retain_and_remap
+6,Shield wire,4,shield_wire,-1,retain_and_remap
+7,Tower,0,tower,-1,retain_and_remap
+8,Suspension insulator,3,insulator,-1,retain_and_remap
+9,Horizontal insulator,3,insulator,-1,retain_and_remap
+10,Jumper conductor,2,jumper_conductor,-1,retain_and_remap
+11,Road surface,-1,,-1,physically_remove_before_voxelization
+12,Water,-1,,-1,physically_remove_before_voxelization

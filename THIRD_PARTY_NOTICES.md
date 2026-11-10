@@ -1,0 +1,11 @@
+# Third-party source notices
+
+This repository includes selected third-party implementation files; existing copyright headers and license files are retained. Original SpanVolt3D software contributions are covered by the root [MIT license](LICENSE), subject to the [licensing scope](LICENSING.md). Third-party implementations retain their existing notices and licenses. Point clouds and labels are governed separately by [data access conditions](DATA_ACCESS.md).
+
+- **Pointcept**: <https://github.com/Pointcept/Pointcept>. Selected runtime under `runtime/pointcept/`, including SpUNet, OA-CNNs, PTv1/PTv2/PTv3, LitePT integration, PointOps/PointROPE source, data transforms, training/test engines and utilities. Existing MIT notice: [`runtime/pointcept/LICENSE`](runtime/pointcept/LICENSE). The standalone evaluation functions derived from Pointcept retain this attribution and are covered by that existing notice. Model and function-level attribution headers remain in source.
+- **PointNet++ PyTorch implementation**: selected source under `runtime/pointnet2/`; existing MIT notice credits benny (2019), retained in [`runtime/pointnet2/LICENSE`](runtime/pointnet2/LICENSE). The selected local source tree did not provide an auditable upstream Git commit. Its benchmark adaptations and Pointcept loss/data adapter are documented by source hashes; no repository revision is invented.
+- **spconv**: <https://github.com/traveller59/spconv>. External sparse backend imported as `spconv.pytorch`; not vendored. SpUNet is the Pointcept spconv implementation, not a MinkowskiEngine model.
+- **LitePT**: <https://github.com/prs-eth/LitePT>, as attributed by the existing Pointcept README and source headers. The selected variant is LitePT-S with the v1m1 decoder. Source remains in the selected Pointcept tree with its existing notice.
+- **FlashAttention**: <https://github.com/Dao-AILab/flash-attention>, external dependency for LitePT, version 2.8.3 in the recorded runtime. No binary or source archive is bundled.
+
+`environments/source_versions.json` records exact selected backbone SHA256 values. The available source trees contain no recorded Git revision; these hashes identify the included implementation without claiming a matching upstream commit. Other imported packages remain external dependencies and retain their respective upstream licenses.

@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-09",
+  "scope": "existing-environment public-runtime import and CPU model-construction check; not a historical full-environment lock",
+  "execution": "isolated disposable CPU container using an existing benchmark image, public source mounted read-only, no network or original-data mount; existing LitePT installed dependencies mounted read-only",
+  "python": "3.10.20",
+  "torch_compiled_cuda": "12.4",
+  "package_versions_observed": {
+    "torch": "2.5.0",
+    "torchvision": "0.20.0",
+    "numpy": "1.26.4",
+    "spconv": "2.3.8",
+    "pointops": "1.0",
+    "flash_attn": "2.8.3",
+    "pointrope": "0.0.0",
+    "addict": "2.4.0",
+    "yapf": "0.43.0",
+    "torch_scatter": "2.1.2+pt25cu124",
+    "torch_cluster": "1.6.3+pt25cu124",
+    "torch_geometric": "2.7.0",
+    "timm": "1.0.27"
+  },
+  "config_parse": {
+    "status": "passed",
+    "models": [
+      "pointnet2",
+      "spunet",
+      "oacnns",
+      "ptv1",
+      "ptv2",
+      "ptv3",
+      "litept"
+    ],
+    "representative_config": "seed42 for each model; actual Config.fromfile used"
+  },
+  "cpu_model_build": {
+    "pointnet2": {
+      "status": "passed",
+      "class": "get_model",
+      "parameters": 1890078,
+      "devices": [
+        "cpu"
+      ]
+    },
+    "spunet": {
+      "status": "passed",
+      "class": "DefaultSegmentor",
+      "parameters": 39144486,
+      "devices": [
+        "cpu"
+      ]
+    },
+    "oacnns": {
+      "status": "passed",
+      "class": "DefaultSegmentor",
+      "parameters": 16909942,
+      "devices": [
+        "cpu"
+      ]
+    },
+    "ptv1": {
+      "status": "passed",
+      "class": "DefaultSegmentor",
+      "parameters": 7767402,
+      "devices": [
+        "cpu"
+      ]
+    },
+    "ptv2": {
+      "status": "passed",
+      "class": "DefaultSegmentor",
+      "parameters": 3908154,
+      "devices": [
+        "cpu"
+      ]
+    },
+    "ptv3": {
+      "status": "passed",
+      "class": "DefaultSegmentorV2",
+      "parameters": 46154662,
+      "devices": [
+        "cpu"
+      ]
+    },
+    "litept": {
+      "status": "passed",
+      "class": "DefaultSegmentorV2",
+      "parameters": 12699870,
+      "devices": [
+        "cpu"
+      ]
+    }
+  },
+  "local_source_origins": {
+    "status": "passed",
+    "relevant_modules_checked": 66,
+    "all_under_public_runtime": true,
+    "old_project_source_imports": 0
+  },
+  "pointops": {
+    "extension_import": "passed",
+    "included_python_source_files_matching_installed_package": 9
+  },
+  "litept": {
+    "existing_flash_attn_import": "passed",
+    "existing_pointrope_extension_import": "passed",
+    "cpu_construction_with_extra_dependencies": "passed",
+    "installed_dependency_files_checked_against_RECORD": 114
+  },
+  "not_performed": [
+    "Fresh environment installation or complete dependency lock",
+    "CUDA kernel execution or any model forward",
+    "GPU training or formal ID/OOD inference",
+    "Every historical run environment exact version identity"
+  ]
+}

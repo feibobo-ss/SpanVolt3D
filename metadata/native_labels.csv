@@ -1,0 +1,14 @@
+native_label_id,native_label_name,annotation_role,label_field,definition_scope
+0,Created,auxiliary_state,LAS classification,project_specific_native_codes
+1,Unclassified,auxiliary_state,LAS classification,project_specific_native_codes
+2,Ground,semantic_label,LAS classification,project_specific_native_codes
+3,Vegetation,semantic_label,LAS classification,project_specific_native_codes
+4,Building,semantic_label,LAS classification,project_specific_native_codes
+5,Conductor,semantic_label,LAS classification,project_specific_native_codes
+6,Shield wire,semantic_label,LAS classification,project_specific_native_codes
+7,Tower,semantic_label,LAS classification,project_specific_native_codes
+8,Suspension insulator,semantic_label,LAS classification,project_specific_native_codes
+9,Horizontal insulator,semantic_label,LAS classification,project_specific_native_codes
+10,Jumper conductor,semantic_label,LAS classification,project_specific_native_codes
+11,Road surface,semantic_label,LAS classification,project_specific_native_codes
+12,Water,semantic_label,LAS classification,project_specific_native_codes

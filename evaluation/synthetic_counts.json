@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "description": "Artificial integer counts for interface checks only; no real scenes or paper scores.",
+  "class_names": ["tower", "conductor", "jumper_conductor", "insulator", "shield_wire", "vegetation"],
+  "scene_confusions": [
+    [[8,2,0,0,0,0],[1,4,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+    [[1,0,0,0,0,0],[0,6,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,5]]
+  ]
+}

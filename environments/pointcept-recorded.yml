@@ -1,0 +1,42 @@
+name: pointcept
+channels:
+  - pyg
+  - pytorch
+  - nvidia/label/cuda-12.4.4
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - cuda
+  - conda-forge::cudnn
+  - gcc=13.2
+  - gxx=13.2
+  - pytorch=2.5.0
+  - torchvision=0.20.0
+  - torchaudio=2.5.0
+  - pytorch-cuda=12.4
+  - ninja
+  - sparsehash
+  - h5py
+  - pyyaml
+  - tensorboard
+  - tensorboardx
+  - yapf
+  - addict
+  - einops
+  - scipy
+  - plyfile
+  - termcolor
+  - timm
+  - tqdm
+  - matplotlib
+  - numpy<2
+  - pip:
+      - torch-cluster -f https://data.pyg.org/whl/torch-2.5.0+cu124.html
+      - torch-scatter -f https://data.pyg.org/whl/torch-2.5.0+cu124.html
+      - torch-sparse -f https://data.pyg.org/whl/torch-2.5.0+cu124.html
+      - torch-geometric
+      - spconv-cu124
+      - wandb

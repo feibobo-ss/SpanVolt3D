@@ -1,0 +1,16 @@
+Subject: SpanVolt3D data request for non-commercial research
+
+Name:
+Institution:
+Research team / project contact:
+Brief non-commercial research purpose:
+Requested native LAS scene scope (voltage / project subset, if known):
+Why this subset is needed:
+
+I confirm that our team has read and accepts DATA_ACCESS.md, including the
+non-commercial research and non-redistribution conditions. We understand
+that the approved delivery contains only the scenes explicitly confirmed
+for our request and does not provide the complete 400-scene corpus or the
+complete frozen six-class benchmark.
+
+Please send this request to feibobo721@outlook.com.

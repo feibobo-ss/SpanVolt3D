@@ -1,0 +1,7 @@
+benchmark_label_id,benchmark_label_name,ignore_id
+0,tower,-1
+1,conductor,-1
+2,jumper_conductor,-1
+3,insulator,-1
+4,shield_wire,-1
+5,vegetation,-1

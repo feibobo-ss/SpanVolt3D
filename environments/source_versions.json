@@ -1,0 +1,13 @@
+{
+  "upstream_commit": "not recorded in supplied source trees",
+  "selection": "400-scene XYZ-only run dated 2026-09-08; 21 saved seed configurations",
+  "unmodified_model_source_sha256": {
+    "runtime/pointcept/pointcept/models/sparse_unet/spconv_unet_v1m1_base.py": "138f34d4341623b0d8fdfd4760a81343c2c6d0d47f7ca7d0a425ea096c3ecce0",
+    "runtime/pointcept/pointcept/models/point_transformer/point_transformer_seg.py": "c953202cec9d04479934bd4d34eec387951a954ded55a7e6a67b9f2a4d7e4efc",
+    "runtime/pointcept/pointcept/models/point_transformer_v2/point_transformer_v2m2_base.py": "ea1be8ae7377a733a0722d12f6d1f8265fbecbf19639e05a6ccf05648cdd57ea",
+    "runtime/pointcept/pointcept/models/point_transformer_v3/point_transformer_v3m1_base.py": "e3d262f785d8d23797434438297cc91e2c59131f79aae41d6878b9a0a2d0d22f",
+    "runtime/pointcept/pointcept/models/oacnns/oacnns_v1m1_base.py": "60b5a1f934f081c0523fad0ca8b74030c49e27aff52bfeb351cdb35774668fff",
+    "runtime/pointcept/pointcept/models/litept/litept_v1.py": "5bc7a4afa4dc00435a941ed343fa362ef1c99a52d11310d4e2afcfef5922dfaf",
+    "runtime/pointnet2/models/pointnet2_sem_seg_msg_las_final.py": "78b6541b83113bdd5f368094c1e3e23415b6d0899467545c45604b33ddd31672"
+  }
+}
