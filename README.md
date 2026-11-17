@@ -15,9 +15,12 @@ the paper's segmentation benchmark uses six derived classes. These examples
 illustrate the study and do not identify the scenes approved for a data request.*
 
 **Manuscript status:** in preparation for submission.  
-**Current data access:** approved subsets of labelled, already segmented LAS
-scenes, by email request, for non-commercial research by universities and
-research institutions.  
+**Current data access:** The complete collection of 400 labelled, span-level
+LAS scenes (retaining the 13 native annotation codes), or selected scene/project
+subsets, may be requested by email for approved non-commercial research by
+universities and research institutions. Data access is free of charge and
+redistribution is not permitted.
+
 **Data contact:** [feibobo721@outlook.com](mailto:feibobo721@outlook.com).
 
 ## Dataset and paper protocol
@@ -40,28 +43,30 @@ See [dataset and protocol](docs/dataset_and_protocol.md),
 
 | Material | Current access arrangement |
 | --- | --- |
-| Already segmented, labelled native LAS | Approved scene/project subsets may be supplied by email request; native codes 0–12 are retained |
-| Complete 400-scene native corpus | Not included in the current access offer |
-| Complete frozen six-class NPY benchmark | Described for the paper's historical protocol; not included in the current access offer |
-| Complete original engineering point clouds and line-project materials | Not provided |
+| Labelled native LAS scenes | The complete 400-scene collection or selected scene/project subsets may be requested by email, subject to approval; native codes 0–12 are retained |
+| Frozen six-class NPY benchmark files | Not included in the current data-access offer or the public repository |
+| Original unsegmented engineering point clouds and line-project materials | Not provided |
 | Label definitions, anonymous historical splits, preparation/evaluation code and archived scores | Included in this repository |
 
-Data requests are considered for **non-commercial research by universities and
-research institutions**. Research access is free of charge. Commercial use
-and redistribution of the supplied point clouds or labels are not permitted.
-An approved delivery may contain selected scenes from one project; the exact
-scope and delivery method are confirmed for each request.
+Requests are considered for approved **non-commercial research by universities
+and research institutions**. Researchers may request the full 400-scene labelled
+native LAS collection or selected scene/project subsets. Research access is
+free of charge. Commercial use and redistribution of the supplied point clouds
+and labels are not permitted. The approved file list and delivery arrangements
+are confirmed by email. Email [feibobo721@outlook.com](mailto:feibobo721@outlook.com)
+with your name, institution, research team, research purpose, and requested
+scene scope.
 
-Email [feibobo721@outlook.com](mailto:feibobo721@outlook.com) with your name,
-institution, research team, research purpose and requested scene scope.
 The [request template](docs/data_request_template.txt) can be copied into an
 email. Read [Data access and use conditions](DATA_ACCESS.md) before requesting
 data. A delivery will include its own anonymous scene/file list and label
 definitions.
 
-**Access to a project subset does not provide all inputs needed to reproduce
-the paper's complete training, ID and cross-voltage test results.** The full
-400-scene inventory and fixed splits remain available as protocol records.
+A selected scene/project subset is not sufficient to reproduce the complete
+400-scene benchmark. Requests for the complete labelled native LAS corpus are
+possible, subject to approval. The complete frozen six-class NPY benchmark,
+pretrained model weights, per-point predictions, and Section IV-D (formerly
+Section 4.4) application code are outside the current delivery commitment.
 
 ## Code and repository contents
 
@@ -105,7 +110,7 @@ These commands inspect interfaces and archived records. They do not run new
 training or inference. The metric example returns fractional values; archived
 score aggregation uses percentage values and sample SD (`ddof=1`).
 
-### Working with an approved native LAS subset
+### Working with approved native LAS scenes
 
 Use the delivered scene list and the native `classification` codes in
 [`metadata/native_labels.csv`](metadata/native_labels.csv). These are
@@ -122,9 +127,9 @@ for inspection and authorized use.
 
 ### Complete historical benchmark tools
 
-These commands document the full-corpus workflow and are only applicable to
-someone who already has all corresponding historical inputs. They are not
-instructions to request a complete delivery under the current access offer.
+These commands document the full-corpus workflow and require all corresponding
+historical inputs. Their availability does not mean that the data can be
+downloaded directly from this repository.
 
 ```bash
 python3 preprocessing/verify_benchmark.py --data-root /path/to/benchmark6
@@ -151,8 +156,7 @@ are in [evaluation details](docs/evaluation_details.md).
 
 ## Paper and contact
 
-**Title:** *SpanVolt3D: A multi-voltage point-cloud dataset and benchmark for
-transmission corridor inspection*.
+**Title:** *Benchmarking Semantic Segmentation and Cross-Voltage Generalization in UAV LiDAR Transmission Corridors*.
 
 **Status:** manuscript in preparation for submission; no publication DOI is
 claimed.
@@ -168,7 +172,7 @@ University of Geosciences, Wuhan 430074, China.
 The table records the confirmed roles, not a finalized complete author list.
 Formal citation metadata will be added when that list and manuscript details
 are finalized. Research outputs using supplied data should acknowledge
-SpanVolt3D, identify the approved subset, and cite the accompanying paper when
+SpanVolt3D, identify the approved scene scope, and cite the accompanying paper when
 its citation becomes available.
 
 ## Funding

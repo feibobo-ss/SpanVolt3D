@@ -86,12 +86,11 @@ checks, not fresh inference, and were not repeated in this closeout.
   establish all 400 seeds or validate all 400 reconstructions. The historical
   frozen six-class arrays define the exact paper input bytes. Conversion stops
   if a generated file fails its recorded historical hash.
-- The current [access arrangement](../DATA_ACCESS.md) covers only approved
-  project/scene subsets of native LAS for non-commercial research by universities
-  and research institutions, without republication of the supplied data. The
-  full 400-scene corpus and frozen six-class arrays are outside the current
-  offer. The publicly documented full protocol does not make a partial delivery
-  sufficient for reproducing the complete benchmark.
+- The full 400-scene labelled native LAS collection, or selected scene/project
+  subsets, may be requested for approved non-commercial research by eligible
+  institutions. The frozen six-class NPY arrays remain outside the data-access
+  offer. A selected subset is insufficient for reproducing the full historical
+  fixed-split benchmark, and the public manifest is not a data download.
 - One anonymous LAS/NPY pair was validated in the recorded checks; no complete
   delivery corpus has been validated under anonymous names. This evidence does
   not extend the current access offer. The public builder and verifier retain

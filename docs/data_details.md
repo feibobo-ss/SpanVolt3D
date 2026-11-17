@@ -9,9 +9,16 @@ The full paper inventory contains two separate, corresponding layers:
 | Segmented native annotation | 400 LAS files | Native codes 0–12 in LAS `classification` | Annotated scene/span files, before benchmark filtering and sampling |
 | Frozen paper benchmark | 400 NPY arrays | Benchmark IDs 0–5 in column 6 | Filtered, mapped, voxel sampled and capped |
 
-These inventory counts describe the complete study, not the data supplied with an approved request. **Current access is limited to approved project/scene subsets of the segmented native LAS layer**, retaining the 13 original annotation codes, for non-commercial research by universities and research institutions. Republishing the supplied point clouds or labels is not permitted. The current offer does not include the complete 400-scene corpus or the frozen six-class NPY layer. See [data access and use conditions](../DATA_ACCESS.md). The complete original engineering point clouds are outside this access scope.
+These inventory counts describe the full study. The complete 400-scene
+collection of labelled native LAS files, or selected scene/project subsets,
+may be requested for approved non-commercial research by eligible universities
+and research institutions. Supplied LAS retains the 13 native annotation
+codes, and redistribution is not permitted. This does not include automatic
+access to the frozen six-class NPY arrays. Original unsegmented engineering
+point clouds and line-project materials are not provided.
+See [data access and use conditions](../DATA_ACCESS.md).
 
-Both historical layers are identified in the author's private inventory. No point clouds, Excel workbooks or data archives are included in this repository. The full `splits/scene_manifest.csv` documents the paper's fixed scene memberships; each approved delivery must identify its actual subset separately. The `native_filename` and `benchmark_filename` fields define anonymous naming conventions and are not download URLs or promises of delivery. A previously recorded private, single-scene check confirmed that anonymous LAS and frozen NPY copies preserve the original bytes, labels, point counts and frozen NPY SHA256. This check is evidence about those files, not a current offer of both layers or a complete anonymous data package.
+Both historical layers are identified in the author's private inventory. No point clouds, Excel workbooks or data archives are included in this repository. The full `splits/scene_manifest.csv` documents the paper's fixed scene memberships; each approved delivery must identify its actual scene scope separately. The `native_filename` and `benchmark_filename` fields define anonymous naming conventions and are not download URLs or promises of delivery. A previously recorded private, single-scene check confirmed that anonymous LAS and frozen NPY copies preserve the original bytes, labels, point counts and frozen NPY SHA256. This check validates only that pair of files; it does not validate a complete anonymous delivery or extend access to the frozen NPY layer.
 
 The native inventory contains 5,879,971,739 points according to existing complete statistics, cross-checked here against all current LAS headers. The frozen NPY inventory contains 328,310,219 points. This release checked all NPY shapes, dtypes, file sizes and point counts against saved records, and sampled labels from one scene per voltage. It did not recount all native labels or rehash all point clouds.
 

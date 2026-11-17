@@ -18,7 +18,17 @@ For Pointcept, `epoch=200`, `eval_epoch=10` and `train.loop=20` mean 10 training
 
 All inputs are six-class, already preprocessed Nx7 NPY arrays. Model input features are XYZ only. RGB storage slots are ignored. The 0.08 m model grid and 60,000-point training crop/test chunk are distinct from the 0.30 m data preprocessing voxel.
 
-The examples below document the historical six-class benchmark. Complete reproduction requires all of its fixed data splits. [Current data access](../DATA_ACCESS.md) provides only approved native LAS project/scene subsets for non-commercial research by universities and research institutions, without republication of the supplied data; it does not include the complete corpus or frozen six-class inputs. A received native subset can be used with its original labels for the approved purpose, but is not directly the input to these benchmark commands. The full-corpus preparation and verification scripts do not accept a shortened manifest. Command inspection and `--dry-run` remain usable without point-cloud data.
+The examples below document the historical six-class benchmark. Complete reproduction requires all of its fixed data splits.
+Under the [current data-access arrangement](../DATA_ACCESS.md), universities and
+research institutions may request by email the complete 400-scene collection
+of already segmented, labelled native LAS files retaining the 13 native
+annotation codes (0–12), or selected scene/project subsets. Access is free of
+charge for approved non-commercial research; redistribution is not permitted.
+Complete original engineering point clouds and line-project materials are not
+provided. The complete frozen six-class NPY benchmark, pretrained model weights,
+per-point predictions, and Section IV-D (formerly Section 4.4) application code
+are outside the current delivery commitment.
+Received native LAS scenes can be used with their original labels for the approved purpose, but are not directly the input to these benchmark commands. The full-corpus preparation and verification scripts do not accept a shortened manifest. Command inspection and `--dry-run` remain usable without point-cloud data.
 
 Use the portable launcher from the repository root (the first two commands do not run a model):
 

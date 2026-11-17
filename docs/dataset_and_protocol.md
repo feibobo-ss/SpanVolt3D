@@ -5,12 +5,13 @@ seven-model, three-seed experiment. The protocol is defined by the fixed
 lists, saved configurations, source code and run records. Older RGB,
 `others = vegetation + building`, and Ground7 experiments are different tasks.
 
-This document and the full public manifest describe all 400 historical study
-scenes. Current data access covers only approved project/scene subsets of
-native labelled LAS for non-commercial research by universities and research
-institutions, without republication of the supplied data. It does not include
-the full corpus or frozen six-class arrays. See [data access](../DATA_ACCESS.md).
-An approved subset and its delivery list do not replace the paper's fixed splits.
+The public manifest documents all 400 historical study scenes. The complete
+collection of labelled, span-level native LAS scenes retaining the 13 native
+annotation codes, or selected scene/project subsets, may be requested for
+approved non-commercial research by eligible universities and research
+institutions. The frozen six-class NPY arrays are not included in this access
+offer. See [data access](../DATA_ACCESS.md). The historical fixed benchmark
+splits remain unchanged.
 
 ## Two representations
 
