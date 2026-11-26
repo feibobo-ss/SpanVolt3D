@@ -5,13 +5,10 @@ seven-model, three-seed experiment. The protocol is defined by the fixed
 lists, saved configurations, source code and run records. Older RGB,
 `others = vegetation + building`, and Ground7 experiments are different tasks.
 
-The public manifest documents all 400 historical study scenes. The complete
-collection of labelled, span-level native LAS scenes retaining the 13 native
-annotation codes, or selected scene/project subsets, may be requested for
-approved non-commercial research by eligible universities and research
-institutions. The frozen six-class NPY arrays are not included in this access
-offer. See [data access](../DATA_ACCESS.md). The historical fixed benchmark
-splits remain unchanged.
+The public manifest documents all 400 historical study scenes. Native400 v1.0
+releases all 400 native annotated scenes under CC BY 4.0 through Zenodo. The
+frozen six-class NPY arrays are not distributed separately. The historical
+fixed benchmark splits remain unchanged. See [data access](../DATA_ACCESS.md).
 
 ## Two representations
 
@@ -94,16 +91,18 @@ rebuilt and matched the frozen arrays in values, point order and file SHA256.
 This does not verify all 400 scenes or establish every historical seed. The
 converter checks its output against each recorded benchmark hash and stops
 on a mismatch. The frozen six-class arrays define the exact historical inputs;
-this technical description is not an offer to supply them under the current
-[data access arrangement](../DATA_ACCESS.md). See
+they are not separately distributed in Native400 v1.0.
+See the [release scope](../DATA_ACCESS.md). See
 [data details](data_details.md) for evidence and verification limits. Training
 seeds 42/3407/9173 are separate from this preprocessing rule.
 
-No additional rotation, scale normalization, geolocation-removal transform or
-coordinate-system redesign was introduced. Model-side `CenterShift` centers XY
+The published native-to-benchmark conversion introduces no additional
+rotation, scale normalisation or coordinate transform. Model-side `CenterShift` centers XY
 using the bounding box and shifts the minimum Z to zero; each crop/chunk is
-centered in XY again. These transforms preserve metre scale. Anonymizing file
-identifiers is not a claim that source geometry has been geographically scrubbed.
+centered in XY again. These transforms preserve metre scale. Native400 v1.0 uses the author-confirmed
+local metric coordinate representation; this should not be confused with
+merely anonymising file identifiers. The coordinate system and point order
+must remain unchanged when applying the historical voxel grid.
 
 **Do not run native filtering or 0.30-m voxel sampling on historical benchmark
 arrays.** The six-class arrays are already the input representation for training
@@ -112,9 +111,9 @@ the original unfiltered corridor data.
 
 The published `build_benchmark.py` and `verify_benchmark.py` require all 400
 manifest scenes and the corresponding files. They do not accept a shortened
-manifest or an approved LAS subset. Received native subsets can be used directly
-with their native label definitions for the approved research purpose; complete
-benchmark reproduction requires the full historical data and protocol.
+manifest or a scene subset. Native subsets may be reused under CC BY 4.0 with
+their native label definitions. Complete benchmark reconstruction requires
+the full historical data, protocol and matching output hashes.
 
 ## Model-side sampling, budget and checkpoint selection
 

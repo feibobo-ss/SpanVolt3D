@@ -86,16 +86,14 @@ checks, not fresh inference, and were not repeated in this closeout.
   establish all 400 seeds or validate all 400 reconstructions. The historical
   frozen six-class arrays define the exact paper input bytes. Conversion stops
   if a generated file fails its recorded historical hash.
-- The full 400-scene labelled native LAS collection, or selected scene/project
-  subsets, may be requested for approved non-commercial research by eligible
-  institutions. The frozen six-class NPY arrays remain outside the data-access
-  offer. A selected subset is insufficient for reproducing the full historical
-  fixed-split benchmark, and the public manifest is not a data download.
-- One anonymous LAS/NPY pair was validated in the recorded checks; no complete
-  delivery corpus has been validated under anonymous names. This evidence does
-  not extend the current access offer. The public builder and verifier retain
-  their requirement for all 400 scenes and do not accept a shortened manifest
-  or a delivered native subset.
+- Native400 v1.0 contains all 400 native annotated scenes under CC BY 4.0;
+  the frozen six-class NPY arrays are not separately distributed. See
+  [DATA_ACCESS.md](../DATA_ACCESS.md) for the current Zenodo release scope.
+- The one anonymous LAS/NPY pair and two reconstructions above are dated
+  checks of the historical benchmark. They do not verify all 400 native-to-NPY
+  reconstructions. Native400 packaging and lossless LAZ/ZIP validation are a
+  separate operation and do not remove this benchmark-reconstruction limit.
+  The full-corpus builder and verifier still require all 400 manifest scenes.
 - Real imports and CPU construction do not establish GPU forward correctness,
   CUDA-kernel numerical behavior or training/inference reproducibility. A fresh
   installation from the unpinned recipe, full per-run package freeze, all
@@ -114,6 +112,6 @@ checks, not fresh inference, and were not repeated in this closeout.
   for the main segmentation table. Section 4.4 application code is not included
   in this repository.
 
-See [data access and use conditions](../DATA_ACCESS.md) for the current offer and
+See [data access and use conditions](../DATA_ACCESS.md) for the current release scope and
 [paper and contact information](../README.md#paper-and-contact) for the manuscript
 and repository status, contact details and applicable code licensing.

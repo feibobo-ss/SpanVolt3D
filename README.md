@@ -11,15 +11,19 @@ errors affect inspection-oriented geometric measurements.
 
 *Examples from the paper's native annotated scenes. The legend shows categories
 visible in these examples. The native annotation scheme contains 13 codes;
-the paper's segmentation benchmark uses six derived classes. These examples
-illustrate the study and do not identify the scenes approved for a data request.*
+the paper's segmentation benchmark uses six derived classes. These examples illustrate the study and the native annotation representation.*
 
-**Manuscript status:** in preparation for submission.  
-**Current data access:** The complete collection of 400 labelled, span-level
-LAS scenes (retaining the 13 native annotation codes), or selected scene/project
-subsets, may be requested by email for approved non-commercial research by
-universities and research institutions. Data access is free of charge and
-redistribution is not permitted.
+**Manuscript status:** in preparation for submission to Earth System Science Data.
+
+**Data release:** Native400 version 1.0 comprises all 400 native annotated
+span-level scenes (5,879,971,739 points; 13 native annotation codes), deposited
+in Zenodo for peer review under **CC BY 4.0**. The native LAS files are
+losslessly compressed as LAZ and distributed in independently extractable ZIP
+archives. The reserved dataset DOI is
+[10.5281/zenodo.24503872](https://doi.org/10.5281/zenodo.24503872).
+While the deposit remains a draft, its DOI may not resolve; an anonymous
+review link is supplied with the manuscript. The review token is not published
+in this repository. Public DOI access will be enabled when the record is published.
 
 **Data contact:** [feibobo721@outlook.com](mailto:feibobo721@outlook.com).
 
@@ -31,42 +35,33 @@ codes**, including auxiliary states. The derived six-class benchmark comprises
 tower, conductor, jumper conductor, insulator, shield wire and vegetation.
 
 The paper uses seven baselines, XYZ-only model inputs, three training seeds
-and fixed project-grouped splits. The public scene manifest documents that
-complete historical protocol. **It is not a list of files automatically
-provided to an applicant.**
+and fixed project-grouped splits. The public scene manifest documents the
+complete historical protocol. The Zenodo metadata link the native release
+identifiers to these experiment scene identifiers and fixed assignments.
 
 See [dataset and protocol](docs/dataset_and_protocol.md),
 [label definitions and processing](docs/data_details.md), and
 [verification records and limits](docs/reproducibility.md).
 
-## Current data access
+## Data release and access
 
-| Material | Current access arrangement |
+| Material | Release scope |
 | --- | --- |
-| Labelled native LAS scenes | The complete 400-scene collection or selected scene/project subsets may be requested by email, subject to approval; native codes 0–12 are retained |
-| Frozen six-class NPY benchmark files | Not included in the current data-access offer or the public repository |
-| Original unsegmented engineering point clouds and line-project materials | Not provided |
+| Native annotated scenes | All 400 scenes in Zenodo Native400 v1.0, retaining native codes 0–12; losslessly compressed LAZ in independent ZIP archives; CC BY 4.0 |
+| Frozen six-class NPY benchmark files | Derived experimental representation; not separately distributed |
+| Original continuous engineering surveys and line-project materials | Outside the release scope |
 | Label definitions, anonymous historical splits, preparation/evaluation code and archived scores | Included in this repository |
 
-Requests are considered for approved **non-commercial research by universities
-and research institutions**. Researchers may request the full 400-scene labelled
-native LAS collection or selected scene/project subsets. Research access is
-free of charge. Commercial use and redistribution of the supplied point clouds
-and labels are not permitted. The approved file list and delivery arrangements
-are confirmed by email. Email [feibobo721@outlook.com](mailto:feibobo721@outlook.com)
-with your name, institution, research team, research purpose, and requested
-scene scope.
+The Native400 v1.0 data and semantic labels use **CC BY 4.0**. The former
+email-approval, non-commercial and non-redistribution conditions do not apply
+to this release. See [data access and licensing](DATA_ACCESS.md) for attribution
+and version information. The MIT software licence is separate from the data licence.
 
-The [request template](docs/data_request_template.txt) can be copied into an
-email. Read [Data access and use conditions](DATA_ACCESS.md) before requesting
-data. A delivery will include its own anonymous scene/file list and label
-definitions.
-
-A selected scene/project subset is not sufficient to reproduce the complete
-400-scene benchmark. Requests for the complete labelled native LAS corpus are
-possible, subject to approval. The complete frozen six-class NPY benchmark,
-pretrained model weights, per-point predictions, and Section IV-D (formerly
-Section 4.4) application code are outside the current delivery commitment.
+The complete frozen six-class NPY benchmark, pretrained model weights,
+per-point predictions and Section 4.4 clearance application code are not
+included in the current public package. The provided conversion functions and
+per-scene metadata document how native scenes relate to the historical six-class
+experiments; [verification limits](docs/reproducibility.md) remain explicit.
 
 ## Code and repository contents
 
@@ -110,20 +105,28 @@ These commands inspect interfaces and archived records. They do not run new
 training or inference. The metric example returns fractional values; archived
 score aggregation uses percentage values and sample SD (`ddof=1`).
 
-### Working with approved native LAS scenes
+### Working with Native400 scenes
 
-Use the delivered scene list and the native `classification` codes in
+Extract the independent ZIP archives, then losslessly decompress LAZ to LAS
+before using the supplied native-data reader. This reader uses an uncompressed
+LAS memory map and does not directly decode LAZ or ZIP files. Use the Zenodo
+metadata to associate each native scene with the `SCENE_####.las` basename
+required by `native_filename` in `splits/scene_manifest.csv`; preserve original
+point order, coordinates, scale and offsets. Do not apply further coordinate
+translation, normalisation, rotation or resampling when reconstructing the
+historical benchmark.
+
+The native `classification` codes are defined in
 [`metadata/native_labels.csv`](metadata/native_labels.csv). These are
-project-specific codes; do not substitute a generic LAS classification table.
-Each scene contains the categories present in that scene, not necessarily all
-13 codes.
+project-specific codes, not the generic LAS classification table. A scene
+contains the categories present in that scene, not necessarily all 13 codes.
 
-The supplied LAS may be used directly for the approved research. The existing
-`build_benchmark.py` and `verify_benchmark.py` command-line tools require the
-complete fixed 400-scene corpus. **They do not accept a project subset, and
-trimming the public manifest does not turn them into subset tools.** Their
-numerical conversion functions and the six-class mapping remain documented
-for inspection and authorized use.
+The existing `build_benchmark.py` and `verify_benchmark.py` command-line tools
+require the complete fixed 400-scene corpus. They do not accept a shortened
+manifest. Use the recorded numeric `sampling_seed` values rather than hashing
+new public paths, and retain each recorded `benchmark_sha256` check. Rebuilt
+point clouds can be used for alternative tasks; only outputs matching the
+recorded historical hashes establish the same stored experimental input bytes.
 
 ### Complete historical benchmark tools
 
@@ -156,7 +159,7 @@ are in [evaluation details](docs/evaluation_details.md).
 
 ## Paper and contact
 
-**Title:** *Benchmarking Semantic Segmentation and Cross-Voltage Generalization in UAV LiDAR Transmission Corridors*.
+**Title:** *SpanVolt3D: an annotated point-cloud dataset of transmission corridors across four voltage levels*.
 
 **Status:** manuscript in preparation for submission; no publication DOI is
 claimed.
@@ -169,11 +172,10 @@ claimed.
 **Affiliation:** School of Geography and Information Engineering, China
 University of Geosciences, Wuhan 430074, China.
 
-The table records the confirmed roles, not a finalized complete author list.
-Formal citation metadata will be added when that list and manuscript details
-are finalized. Research outputs using supplied data should acknowledge
-SpanVolt3D, identify the approved scene scope, and cite the accompanying paper when
-its citation becomes available.
+The dataset creators, version and citation are recorded in Zenodo. Cite the
+specific Native400 dataset version and identify the scenes and processing used
+in research outputs. Cite the accompanying paper when its citation is available.
+The table above identifies the data and correspondence contacts.
 
 ## Funding
 

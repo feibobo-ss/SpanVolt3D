@@ -19,8 +19,10 @@ remain subject to their own licenses. See
 
 ## Point clouds and labels
 
-The MIT software license does not license point-cloud data, semantic labels
-or the complete historical corpus. Supplied data are subject to
-[DATA_ACCESS.md](DATA_ACCESS.md), including the non-commercial research and
-non-redistribution conditions. Public protocol metadata and displayed paper
-figures do not constitute a data delivery.
+The Native400 v1.0 data and semantic labels deposited in Zenodo use
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), independently of the
+MIT software licence. The reserved dataset DOI is
+https://doi.org/10.5281/zenodo.24503872. The former non-commercial and
+non-redistribution data conditions do not apply to this release.
+See [DATA_ACCESS.md](DATA_ACCESS.md) for the dataset scope, review-stage access
+and attribution. Third-party software terms above remain unchanged.

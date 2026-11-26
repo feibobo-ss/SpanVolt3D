@@ -1,89 +1,60 @@
-# Data access and use conditions
+# Data access and licensing
 
-These conditions describe the current SpanVolt3D data-request arrangement.
-They apply to point clouds and semantic labels supplied after an approved
-request. The separate software licensing scope is described in
-[LICENSING.md](LICENSING.md).
+## Native400 version 1.0
 
-## Available material and scope
+SpanVolt3D Native400 v1.0 comprises all 400 annotated transmission-line spans
+across 110, 220, 500 and 1000 kV, with 5,879,971,739 native points and 13 native
+annotation codes. The 400 native scenes are distributed as losslessly
+compressed LAZ files in independently extractable ZIP archives. The release
+retains local metric geometry and withholds absolute geographic positions.
+Scene metadata link release identifiers to historical experiment scene
+identifiers, anonymous project groups, voltage levels and fixed split roles.
 
-Eligible universities and research institutions may request the complete
-400-scene collection of already segmented, labelled, span-level LAS files
-retaining the 13 native annotation codes (0–12), or selected scene/project
-subsets, for approved non-commercial research. The approved scene/file list
-and delivery arrangements are confirmed for each request by email.
+The data are deposited in Zenodo for peer review. The reserved DOI is
+https://doi.org/10.5281/zenodo.24503872. While the record is a draft, this DOI
+may not resolve; anonymous reviewer access is provided with the manuscript.
+The private review token is not published here. Once published, the DOI
+provides public access to the dataset record and files.
 
-The complete frozen six-class NPY benchmark is not included in the current
-access offer or the public repository. Original unsegmented engineering point
-clouds and line-project materials are not provided. The anonymous 400-scene
-manifest documents the historical benchmark protocol; it is not a public
-download service or an automatic entitlement to receive data.
+## Data licence
 
-## Eligible research and permitted use
+The Native400 v1.0 point clouds and semantic labels are licensed under
+Creative Commons Attribution 4.0 International (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/.
 
-Approved access is provided **free of charge to universities and research
-institutions for non-commercial research**. An application and its approval
-identify the requesting research team and purpose. Access is limited to that
-approved team and purpose. A different team should submit its own request.
+Reuse and redistribution, including commercial use, are permitted under that
+licence with appropriate attribution, a link to the licence and an indication
+of changes. Use the dataset creators and citation recorded in Zenodo and cite
+the version used. This summary does not replace the licence text.
 
-Commercial use is not permitted under this arrangement. This includes using
-the supplied data to develop, evaluate, train or improve commercial products
-or services, or deploying models trained with the supplied data in commercial
-products or services. The current arrangement does not provide a commercial
-licensing option.
+The former project email-approval, non-commercial and non-redistribution
+arrangement does not apply to the Native400 v1.0 CC BY 4.0 release. No
+additional email permission is required for uses allowed by that licence.
 
-## Redistribution and research outputs
+## Representations and scope
 
-Recipients must not redistribute, publicly upload, mirror, sell or include
-the supplied point clouds or labels in another downloadable dataset. This
-also applies to subsets, format conversions and resampled versions that
-contain supplied point coordinates or labels. Sharing within the approved
-research team for the approved purpose is permitted.
+The release contains the complete 400 selected native annotated scenes. The
+original continuous engineering surveys and associated project documents
+are outside its scope. The derived six-class NPY arrays used for the reference
+experiments are not distributed as a separate point-cloud product.
 
-Non-commercial research publications may report experimental findings,
-aggregate metrics and illustrative point-cloud renderings with appropriate
-attribution. Such publication must not distribute the underlying downloadable
-point coordinates or labels. Report the approved scene scope and distinguish
-subset experiments from results on the complete 400-scene benchmark.
-Research outputs should acknowledge SpanVolt3D and cite the accompanying
-paper when a verified citation becomes available.
+The repository provides the label mapping, scene assignments, effective
+per-scene sampling seeds, historical benchmark hashes, preparation functions,
+evaluation code and archived segmentation scores. The numerical seeds retain
+the documented historical-path inference and verification limits in
+[reproducibility.md](docs/reproducibility.md). The published full-corpus builder
+and verifier require all 400 manifest scenes. Native subsets may be reused
+under CC BY 4.0 but do not by themselves reproduce the complete fixed-split
+benchmark.
 
-## How to request data
+The reader requires uncompressed LAS. Decompress LAZ losslessly and use the
+release metadata to prepare the historical scene basenames without altering
+point order or coordinates. See [data details](docs/data_details.md).
 
-Email **[feibobo721@outlook.com](mailto:feibobo721@outlook.com)** and include:
+## Software and other materials
 
-1. Your name and institutional affiliation.
-2. Your research team or project contact.
-3. A brief description of the non-commercial research purpose.
-4. The requested scope: the complete 400-scene labelled native LAS collection
-   or selected voltage/scene/project subsets, and why it is needed.
-   Exact public scene IDs are not required if unknown.
-5. Confirmation that the team has read and accepts these conditions.
-
-A [plain-text request template](docs/data_request_template.txt) is provided.
-Approval and the scene scope are confirmed by email. Submitting a request is
-not automatic approval. The delivery method is arranged after approval; no
-fixed reply deadline or public download service is promised.
-
-## What accompanies an approved delivery
-
-Each delivery should include the approved anonymous scene/file list, the
-native label definitions, and a short note identifying the native LAS
-representation and delivery version/date. The scene list is specific to that
-delivery and includes all scenes approved for that request, whether the complete
-400-scene collection or a selected subset. The historical manifest in this
-repository does not itself authorize delivery.
-
-The current full-benchmark command-line tools require all 400 historical
-scenes. A delivered project subset can support research within its approved
-scope, but it is not sufficient by itself to reproduce the paper's complete
-training, ID and OOD results. See [data details](docs/data_details.md).
-
-## Code and other materials
-
-These data conditions do not replace licenses for the repository's software.
-No pretrained weights or per-point predictions are supplied in the public
-code package, and Section 4.4 application code is outside that package.
-The complete frozen six-class NPY benchmark, pretrained model weights,
-per-point predictions, and Section IV-D (formerly Section 4.4) application
-code are outside the current delivery commitment.
+Original project software uses the separate [MIT License](LICENSE), and
+third-party software retains its original notices and licences; see
+[LICENSING.md](LICENSING.md). The data licence does not replace those software
+terms. Pretrained weights, per-point predictions and the Section 4.4 clearance
+application code are not part of the current public package.
